@@ -4,10 +4,12 @@ const express = require("express");
 // CONFIGURATION //
 const app = express();
 const morgan = require("morgan");
+const cors = require("cors");
 
 // MIDDLEWARE //
 app.use(express.json());
 app.use(morgan());
+app.use(cors());
 
 // ROUTES //
 app.get("/", (req, res) => {
