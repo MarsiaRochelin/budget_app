@@ -7,12 +7,12 @@ const morgan = require("morgan");
 
 // MIDDLEWARE //
 app.use(express.json());
+app.use(morgan());
 
 // ROUTES //
 app.get("/", (req, res) => {
   res.send(`welcome to the budget app`);
 });
-app.use(morgan());
 
 app.get("*", (req, res) => {
   res.status(404).send("page not found");
