@@ -3,6 +3,7 @@ const express = require("express");
 
 // CONFIGURATION //
 const app = express();
+const morgan = require("morgan");
 
 // MIDDLEWARE //
 app.use(express.json());
